@@ -1,0 +1,11 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: sans-serif;
+}
+:root{
+ --bg: #d7022c;
+ --bg-py: #FFD740;
+ --bg-light: #F2F2F2;
+} 

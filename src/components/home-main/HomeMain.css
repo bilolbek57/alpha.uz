@@ -1,0 +1,18 @@
+.homemain{
+    line-height: 1.4;
+    background: #fff;
+}
+.homemain p{
+    margin-top: 20px;
+}
+h1{
+    margin-top: 20px;
+}
+.dico{
+  color: red;
+  text-decoration: underline;  
+}
+.dico:hover{
+    text-decoration: none;
+    cursor: pointer;
+}

@@ -1,0 +1,79 @@
+.single__img{
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+.sing__imgs{
+    width: 400px;
+    height: 400px;
+}
+.single__text{
+    width: 500px;
+    line-height: 2;
+    margin-left: 30px;
+
+}
+.sing{
+    color: #000;
+}
+.s{
+    transform: translateX(-5px);
+}
+.sing__h1{
+    font-family: cursive;
+    margin-bottom: 30px;
+}
+.sing__btn{
+    padding: 10px 30px;
+    border-radius: 10px;
+    border: 1px solid #000;
+    background: transparent;
+    margin-left: 5px;
+}
+.sing__rasm{
+    width: 70px;
+    height: 70px;
+}
+.sing__dis{
+    display: flex;
+    gap: 30px;
+    flex-wrap: wrap;
+    flex-wrap: wrap;
+    margin-left: 30px;
+}
+.sing__rasm:hover{
+    border: 1px solid red;
+    border-radius: 10px;
+}
+.sing__left{
+    width: 300px;
+    height: auto;
+    padding-left: 50px;
+    padding-top: 50px;
+    border-radius: 10px;
+border: 1px solid #ddd;    
+line-height: 1.6;
+}
+.sing__bnt2{
+    padding: 10px 40px;
+    border: 1px solid green;
+    border-radius: 10px;
+    margin-top: 10px;
+    color: #fff;
+    background: rgb(8, 242, 8);
+    transition: 1s;
+}
+.sing__bnt3{
+    padding: 10px 45px;
+    margin-top: 10px;
+    border-radius: 10px;
+    border: 1px solid #000;
+    background-color: #fff;
+}
+.sing__bnt3:hover{
+    background: #ddd;
+}
+.sing__bnt2:hover{
+    background: #fff;
+    color: rgb(8, 242, 8);
+}

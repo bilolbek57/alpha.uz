@@ -1,0 +1,24 @@
+.homeBanner{
+    background: #fff;
+    display: flex;
+    gap: 30px;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding-top: 40px;
+}
+.homeb__card{
+    width: 150px;
+    height: 200px;
+    text-align: center;
+    margin-top: 3   0px;
+}
+.homeb__card p{
+    margin-top: -1px;
+}
+.homeb__card img{
+    width: 100%;
+    height: 150px;
+    background: linear-gradient(30deg, #fff, violet);
+    border-radius: 20px;
+}

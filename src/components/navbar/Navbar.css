@@ -1,0 +1,164 @@
+.navbar{
+    width: 100%;
+    height: 90px;
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+.nav__container{
+    position: sticky;
+    top: 0;
+    left: 0;
+    background: #fff;
+    box-shadow: 0 2px 6px #0001;
+    z-index: 10;
+}
+.nav__logo{
+    user-select: none;
+    font-size: 36px;
+    font-family: cursive;
+    color: var(--bg);
+}
+.nav__search{
+    flex: 1;
+    height: 36px;
+    border-radius: 6px;
+    display: flex;
+    background-color:var(--bg-light) ;
+}
+.nav__search input{
+    width: 100%;
+    background: transparent;
+    border: none;
+    outline: none;
+    text-indent: 16px;
+}
+.nav__search button{
+    width: 60px;
+    background: var(--bg);
+    border: none;
+    color: #fff;
+    border-radius: 8px;
+    font-size: 20px;
+}
+.nav__item{
+    text-align: center;
+    cursor: pointer;
+    transition: .3s;
+}
+.nav__item:hover{
+    color: var(--bg);
+}
+.nav__item svg{
+    font-size: 26px;
+}
+.nav__item p{
+    font-size: 14px;
+}
+.nav__katalog{
+    padding: 8px 20px;
+    background: transparent;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+.nav__items{
+    display: flex;
+    gap: 30px;
+}
+
+/* Login panel */
+
+.nav__shadow{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background: #0006;
+    z-index: 11;
+}
+.nav__login{
+    width: 350px;
+    min-height: 360px;
+    background: #fff;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    z-index: 12;
+    border-radius: 15px;
+    padding: 20px;
+    line-height: 3;
+}
+.nav__close{
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    font-size: 26px;
+    cursor: pointer;
+}
+.raqam input{
+    border: none;
+    width: inherit;
+    height: 50px;
+    width: 253px;
+    border-radius: 0 10 10px 0 ;
+}
+.raqam{
+    border: 2px solid #000;
+    border-radius: 10px ;
+}
+
+.s{
+    color: rgb(240, 120, 140);
+}
+.nav__btn{
+    padding: 15px 120px;
+    margin-top: 50px;
+    background: rgb(240, 120, 140)rgb(240, 120, 140);
+    border: none;
+    border-radius: 12px;
+}
+.nav__btn:hover{
+    background: #fff;
+    border: 2px solid rgb(240, 120, 140);
+}
+
+
+@media screen and (max-width:900px){
+    .nav__items{
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        padding: 10px;
+        justify-content: space-around;
+        background: #fff;
+        box-shadow: 0 -20px 6px #0001;
+    }
+}
+
+@media screen and (max-width: 600px){
+    .navbar{
+        flex-wrap: wrap;
+        gap: 5px;
+        height: auto;
+        padding-bottom: 10px;
+    }
+    .nav__logo{
+        width: 100%;
+        text-align: center;
+    }
+    .nav__katalog span{
+        display: none;
+    }
+}
+
+
+@media screen and (max-width:360px){
+    .nav__login{
+        width: 96%;
+    }
+}

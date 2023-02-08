@@ -1,0 +1,44 @@
+.like{
+    min-height: 500px;
+}
+.like__card{
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   gap: 30px;
+    box-shadow: 5px 0 5px 5px #0002;
+   width: 900px;    
+   height: 150px;
+   margin: auto;
+    border-radius: 10px;
+    margin-top: 100px;
+    margin-bottom: 50px;
+}
+.two{
+    display: flex;
+    flex-direction: column;
+}
+.like__imgs{
+    width: 100px;
+    height: 100px;
+}
+.like__btn{
+    display: flex;
+    flex-direction: column;
+}
+.like__btn2{
+    padding: 7px 40px;
+    border-radius: 10px;
+    background: dodgerblue;
+    border: none;
+    color: #fff;
+    margin-top: -5px;
+}
+.like__btn3{
+    padding: 7px 40px;
+    border-radius: 10px;
+    background: orangered;
+    border: none;
+    color: #fff;
+    margin-top: 5px;
+}

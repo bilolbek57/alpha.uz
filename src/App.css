@@ -1,0 +1,22 @@
+.container{
+    width: 1280px;
+    height: 100%;
+    margin: auto;
+}
+.btn{
+    padding: 5px;
+    border-radius: 6px;
+    outline: none;
+}
+a{
+    /* initlian otasidan meros oladi */
+    color: initial;
+    text-decoration: inherit;
+}
+
+
+@media screen and (max-width:1280px){
+    .container{
+        width: 96%;
+    }
+}
