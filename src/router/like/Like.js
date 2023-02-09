@@ -7,7 +7,6 @@ import { useSelector } from 'react-redux'
 
 function Like() {
   const like = useSelector(s=> s.heart)
-  console.log(like)
   return (
     <div className='container like'>
       {
