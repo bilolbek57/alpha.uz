@@ -15,6 +15,7 @@ function Banner() {
                 loop={true}
                 className="mySwiper"
             >
+                <SwiperSlide><img src="https://olcha.uz/image/original/sliders/oz/8yCndkkoNMMi3wtYQh5yz6n3PVOUdVw2okvDE5AWn45zztyweAUoqNPdMbZ9.png" alt="" /></SwiperSlide>
                 <SwiperSlide><img src="https://olcha.uz/image/original/sliders/oz/Z7xfAwhWDG65l9JpHqiDYiaHEiziIjVU3iEfmrIp2XpNMjrzvD5a4ZeDDZKT.png" alt="" /></SwiperSlide>
                 <SwiperSlide><img src="https://olcha.uz/image/original/sliders/oz/4KyyWzAnFrDWzrD89LejqgjUj4UIyphKKoI8oNsq4tkqQaNQSfFE08LNez7o.png" alt="" /></SwiperSlide>
                 <SwiperSlide><img src="https://olcha.uz/image/original/sliders/oz/Ne0z0REj1L6F4SOzKmLNZD8V50ivQ5WwGaeZmnbucfITBU0O1bp3cs2cRRYs." alt="" /></SwiperSlide>

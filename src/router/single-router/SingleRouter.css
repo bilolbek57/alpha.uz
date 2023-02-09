@@ -31,6 +31,10 @@
     margin-left: 5px;
 }
 .sing__rasm{
+    display: flex;
+    flex-wrap: wrap;
+}
+.sing__rasm1{
     width: 70px;
     height: 70px;
 }

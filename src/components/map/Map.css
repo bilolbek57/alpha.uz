@@ -7,11 +7,14 @@
 
 .map__card{
     width: 250px;
-    height: 450px;
+    height: auto;
     line-height: 1.4;
     cursor: pointer;
     text-align: center;
     position: relative;
+}
+.map__title{
+    min-height: 45px;
 }
 .map__heart{
     position: absolute;

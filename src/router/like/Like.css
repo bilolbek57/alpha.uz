@@ -1,5 +1,7 @@
-.like{
-    min-height: 500px;
+
+.likes{
+    display: flex;
+    flex-wrap: wrap;
 }
 .like__card{
    display: flex;
@@ -8,8 +10,7 @@
    gap: 30px;
     box-shadow: 5px 0 5px 5px #0002;
    width: 900px;    
-   height: 150px;
-   margin: auto;
+       margin: auto;
     border-radius: 10px;
     margin-top: 100px;
     margin-bottom: 50px;
@@ -20,7 +21,7 @@
 }
 .like__imgs{
     width: 100px;
-    height: 100px;
+    height: auto;
 }
 .like__btn{
     display: flex;
@@ -41,4 +42,11 @@
     border: none;
     color: #fff;
     margin-top: 5px;
+}
+
+@media screen and (max-width: 550px){
+    .like__card{
+        display: flex;
+        flex-wrap: wrap;
+    }
 }

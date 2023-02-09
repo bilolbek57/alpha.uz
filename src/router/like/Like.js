@@ -13,7 +13,7 @@ function Like() {
       {
         like.length === 0 ?  <Empty url={img} text="Sevimli mahsulotlar yo'q"/> 
         : 
-    <div>
+    <div className='likes'>
       {
         like?.map((item, inx)=><div key={inx} className="like__card">
         <img className='like__imgs' src={item?.urls[0]} alt="" />

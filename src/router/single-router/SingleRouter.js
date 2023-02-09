@@ -21,7 +21,7 @@ function SingleRoute() {
         <div className="sing__dis">
         {
             oneItem?.urls?.map((a, inx) =><div key={a} className="sing__rasm">
-            <img className='sing__rasm' src={a} alt="" />
+            <img className='sing__rasm1' src={a} alt="" />
         </div>)
         }
         </div>
