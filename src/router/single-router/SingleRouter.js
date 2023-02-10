@@ -20,7 +20,7 @@ function SingleRoute() {
         <img className='sing__imgs' src={oneItem?.urls[0]} alt="" />
         <div className="sing__dis">
         {
-            oneItem?.urls?.map((a, inx) =><div key={a} className="sing__rasm">
+            oneItem?.urls?.map((a, inx) =><div key={inx} className="sing__rasm">
             <img className='sing__rasm1' src={a} alt="" />
         </div>)
         }

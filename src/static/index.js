@@ -439,7 +439,7 @@ export const PRODUCTS = [
     {
         id: "pro-9",
         title: "Nokia 110 Dual Sim, Black",
-        price: 17_689_000,
+        price: 500_000,
         singicon : <AiFillStar/>,
         singicon : <AiFillStar/>,
         singicon : <AiFillStar/>,

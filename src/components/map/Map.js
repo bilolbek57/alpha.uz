@@ -33,7 +33,7 @@ function Products() {
             <p>{item?.price}</p>
             <button>{Math.floor(item?.price / 12)} so'm</button>
           </div>
-          <button className='pro__cart'>Add to cart</button>
+          <button className='pro__cart'>Savatchaga qoshish</button>
         </div>)
       }
     </div>
