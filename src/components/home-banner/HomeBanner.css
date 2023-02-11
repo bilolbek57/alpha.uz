@@ -19,6 +19,15 @@
 .homeb__card img{
     width: 100%;
     height: 150px;
-    background: linear-gradient(30deg, #fff, violet);
+    background: linear-gradient(30deg, blue , dodgerblue);
     border-radius: 20px;
+}
+
+
+@media screen and (max-width: 340px){
+    .homeBanner{
+        display: flex;
+        justify-content: center;
+        gap: 20px;
+    }
 }
