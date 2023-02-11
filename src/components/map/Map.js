@@ -40,7 +40,7 @@ const addToCart = (item)=> {
           </div>
           <button onClick={()=> addToCart(item)} className='pro__cart'>Savatchaga qoshish</button>
         </div>)
-      }
+      } 
     </div>
   )
 }

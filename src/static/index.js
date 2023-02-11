@@ -382,7 +382,7 @@ export const PRODUCTS = [
     {
         id: "pro-8",
         title: "Smartfon Xiaomi Redmi Note 11 6 GB 128GB Grafit kulrang",
-        price : "3 391 000 so'm",
+        price : 3_391_000,
         singicon : <AiFillStar/>,
         singicon : <AiFillStar/>,
         singicon : <AiFillStar/>,

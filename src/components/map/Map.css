@@ -12,6 +12,7 @@
     cursor: pointer;
     text-align: center;
     position: relative;
+    object-fit: cover;
 }
 .map__title{
     min-height: 45px;
