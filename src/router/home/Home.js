@@ -11,7 +11,7 @@ function Home() {
     <div className='container'>
       <div className='home'>
         <Banner/>
-        {/* <Swiper/> */}
+        {/* <Swiper/>  */}
         <Map/>
         <Catigory/>
         <HomeBanner/>
