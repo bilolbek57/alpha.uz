@@ -44,4 +44,5 @@ const addToCart = (item)=> {
     </div>
   )
 }
+
 export default Products
