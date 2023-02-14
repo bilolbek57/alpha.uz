@@ -3,10 +3,11 @@ import { useParams } from 'react-router-dom'
 import { PRODUCTS } from '../../static';
 import "./SingleRouter.css"
 import {BsFillCartPlusFill} from "react-icons/bs"
-import { ADD_TO_CART } from '../../context/action/actionType';
+import { ADD_TO_CART, ADD_TO_LIKE } from '../../context/action/actionType';
 import { useDispatch, useSelector } from 'react-redux';
 function SingleRoute() {
     const dispatch = useDispatch()
+  const like = useSelector(s => s.heart)
   const cart = useSelector(s => s.cart)
     const params = useParams()
     const oneItem = PRODUCTS?.find(el => el.id === params.id)
@@ -23,7 +24,13 @@ function SingleRoute() {
         let newCart = cart.map((pro, inx) => inx === index ? { ...pro, qty: pro.qty + 1 } : pro)
         dispatch({ type: ADD_TO_CART, payload: newCart })
       }
-    
+      const addHaert = (item) => {
+        let index = like.findIndex(i => i.id === item.id)
+        if (index > -1) {
+          return
+        }
+        dispatch({ type: ADD_TO_LIKE, payload: item })
+      }
   return (
     <div className='container'>
         <h1 className='sing__h1'>{oneItem?.title}</h1>
@@ -58,6 +65,7 @@ function SingleRoute() {
             <p>Yetkazib berish to'g'risida ma'lumot:</p>
             <p>Standart yetkazib berish Manzilga qarab 2 soatdan 2 ish kunigacha yetkazib beriladi</p>
             <button onClick={() => addToCart(oneItem)} className='sing__bnt2'><BsFillCartPlusFill/>Savatchga qoshish</button>
+            <button className='sing__like' onClick={() => addHaert(oneItem)}>Sevimlilarga qoshish</button>
             <div>
             <button className='sing__bnt3'>Bir klikda sotib olish</button>
             </div>

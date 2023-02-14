@@ -81,3 +81,15 @@ line-height: 1.6;
     background: #fff;
     color: rgb(8, 242, 8);
 }
+.sing__like{
+    padding: 10px 40px ;
+    margin-top: 10px;
+    border-radius: 10px;
+    transition: .7s;
+    background: dodgerblue;
+}
+.sing__like:hover{
+    background: var(--bg);
+    border: none;
+    color: #fff;
+}
