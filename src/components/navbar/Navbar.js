@@ -10,9 +10,13 @@ import { AiOutlineHeart } from "react-icons/ai"
 import { Link } from 'react-router-dom'
 import { FiX } from "react-icons/fi"
 import {HiOutlineChevronDown} from "react-icons/hi"
+import { useSelector } from 'react-redux'
 function Navbar() {
   const [show, setShow] = useState(false)
   document.body.style.overflow= show ? "hidden" : "auto"
+  const cart = useSelector(s=> s.cart)
+  console.log(cart);
+
   return (
     <>
       <div className="nav__container">
@@ -41,6 +45,7 @@ function Navbar() {
               <Link to={"/cart"} className="nav__item">
                 <SlBasket />
                 <p>Savatcha</p>
+                <span className='nav__circle'>{cart?.length}</span>
               </Link>
               <div onClick={() => setShow(true)} className="nav__item">
                 <BsPerson />

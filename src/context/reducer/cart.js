@@ -5,7 +5,7 @@ const cart = (state = [], action) => {
         case ADD_TO_CART:
             return state = action.payload
         case REMOVE_CART:
-            return state = state.fillter(obj =>  obj.id !== action.payload)
+            return state = state.filter(obj =>  obj.id !== action.payload)
             default:
                 return state
     }
