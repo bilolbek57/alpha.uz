@@ -3,7 +3,11 @@ import { useParams } from 'react-router-dom'
 import { PRODUCTS } from '../../static';
 import "./SingleRouter.css"
 import {BsFillCartPlusFill} from "react-icons/bs"
+import { ADD_TO_CART } from '../../context/action/actionType';
+import { useDispatch, useSelector } from 'react-redux';
 function SingleRoute() {
+    const dispatch = useDispatch()
+  const cart = useSelector(s => s.cart)
     const params = useParams()
     const oneItem = PRODUCTS?.find(el => el.id === params.id)
     console.log(oneItem);
@@ -11,7 +15,15 @@ function SingleRoute() {
     if(!oneItem){
         return <div> <h2>Malumot topilmadi</h2> </div>        
     }
-
+    const addToCart = (item) => {
+        let index = cart.findIndex(i => i.id === item.id)
+        if (index < 0) {
+          return dispatch({ type: ADD_TO_CART, payload: [...cart, { ...item, qty: 1 }] })
+        }
+        let newCart = cart.map((pro, inx) => inx === index ? { ...pro, qty: pro.qty + 1 } : pro)
+        dispatch({ type: ADD_TO_CART, payload: newCart })
+      }
+    
   return (
     <div className='container'>
         <h1 className='sing__h1'>{oneItem?.title}</h1>
@@ -45,7 +57,7 @@ function SingleRoute() {
             <h2>{oneItem?.price} so'm</h2>
             <p>Yetkazib berish to'g'risida ma'lumot:</p>
             <p>Standart yetkazib berish Manzilga qarab 2 soatdan 2 ish kunigacha yetkazib beriladi</p>
-            <button className='sing__bnt2'><BsFillCartPlusFill/>Savatchga qoshish</button>
+            <button onClick={() => addToCart(oneItem)} className='sing__bnt2'><BsFillCartPlusFill/>Savatchga qoshish</button>
             <div>
             <button className='sing__bnt3'>Bir klikda sotib olish</button>
             </div>
