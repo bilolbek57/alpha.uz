@@ -14,7 +14,14 @@ import img3 from "../../assets/foo3.jpg"
 import img4 from "../../assets/foo4.jpg"
 import img5 from "../../assets/foo5.jpg"
 import img6 from "../../assets/foo6.jpg"
+import { useLocation } from 'react-router-dom'
 function Footer() {
+
+  const {pathname} = useLocation()
+  if(pathname.includes("admin")){
+    return <></>
+  } 
+
   return (
     <div className='footer'>
       <div className="container">

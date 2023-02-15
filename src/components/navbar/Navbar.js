@@ -11,11 +11,18 @@ import { Link } from 'react-router-dom'
 import { FiX } from "react-icons/fi"
 import {HiOutlineChevronDown} from "react-icons/hi"
 import { useSelector } from 'react-redux'
+import { useLocation } from 'react-router-dom'
 function Navbar() {
   const [show, setShow] = useState(false)
   document.body.style.overflow= show ? "hidden" : "auto"
   const cart = useSelector(s=> s.cart)
-  console.log(cart);
+  const {} = useLocation()
+  
+  const {pathname} = useLocation()
+  if(pathname.includes("admin")){
+    return <></>
+  } 
+
 
   return (
     <>

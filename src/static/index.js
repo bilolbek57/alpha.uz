@@ -64,10 +64,6 @@ export const PRODUCTS = [
         id: "pro-2",
         title: "Noutbuk Lenovo IdeaPad 3 15IIL05 i3-1005G1 8/256GB 15.6",
         price: 17_689_000,
-        singicon : <AiFillStar/>,
-        singicon : <AiFillStar/>,
-        singicon : <AiFillStar/>,
-        singicon : <AiFillStar/>,
         singcard : [
             "4 559 000 so'm",
             "",

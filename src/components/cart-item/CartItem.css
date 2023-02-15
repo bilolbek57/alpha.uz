@@ -4,6 +4,7 @@
     flex-wrap: wrap;
     align-items: center;
     text-align: center;
+    justify-content: center;
 }
 .cart__item{
     width: 300px;
@@ -11,20 +12,20 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    transition: 1s;
+    transition: .3s;
     padding-top: 30px;
 }
 .cart__item img{
     background: #ddd;
 }
 .cart__item:hover{
-    background: #ddd;
+    background: #dddddd82;
     cursor: pointer;
     border-radius: 20px;
 }
 .qty{
     width: 90px;
-    border: 2px solid #ddd;
+    border: 1px solid #000200;
     display: flex;
     align-items: baseline;
     justify-content: center;
@@ -32,7 +33,7 @@
     border-radius: 10px;
     margin: auto;
 }
-.plas{
+.plas{  
 font-size: 20px;
 border: none;
 background: none;
@@ -47,7 +48,7 @@ background: none;
     border: none;
     padding: 5px 30px;
     margin-top: 10px;
-    transition: 1s;
+    transition: .3s;
     border-radius: 6px;
 }
 .delet:hover{

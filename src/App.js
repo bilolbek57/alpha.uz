@@ -8,20 +8,21 @@ import Like from "./router/like/Like"
 import Footer from './components/footer/Footer';
 import Taqoslash from './router/taqoslash/Taqoslash';
 import SingleRoute from './router/single-router/SingleRouter';
-
+import Admin from './router/admin/Admin';
 function App() {
   return (
-<div className="App">
-  <Subheader/>
-  <Navbar/>
+    <div className="App">
+      <Subheader />
+      <Navbar />
       <Routes>
-        <Route path='/'element={<Home/>}/>
-        <Route path='/cart'element={<Cart/>}/>
-        <Route path='/like'element={<Like/>}/>
-        <Route path='/taqoslash'element={<Taqoslash/>}/>
-        <Route path='/product/:id'element={<SingleRoute/>}/>
+        <Route path='/' element={<Home />} />
+        <Route path='/cart' element={<Cart />} />
+        <Route path='/like' element={<Like />} />
+        <Route path='/taqoslash' element={<Taqoslash />} />
+        <Route path='/admin/*' element={<Admin />} />
+        <Route path='/product/:id' element={<SingleRoute />} />
       </Routes>
-      <Footer/>
+      <Footer />
     </div>
   );
 }
