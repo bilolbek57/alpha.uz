@@ -11,8 +11,6 @@ function SingleRoute() {
   const cart = useSelector(s => s.cart)
     const params = useParams()
     const oneItem = PRODUCTS?.find(el => el.id === params.id)
-    console.log(oneItem);
-    
     if(!oneItem){
         return <div> <h2>Malumot topilmadi</h2> </div>        
     }
@@ -47,18 +45,7 @@ function SingleRoute() {
             </div>
         <div className="single__text">
             <p>{oneItem?.xotira}</p>
-            <div className="s">
-            {
-                oneItem?.xotiraxajmi?.map((i, inx)=>  <button className='sing__btn' key={inx}>{i}</button>)
-            }
-            <p className='sing'>Rangi</p>
-            {
-                oneItem?.ranglar?.map((i, inx)=>  <button className='sing__btn' key={inx}>{i}</button>)
-            }
-            </div>
-            {
-                oneItem?.desc?.map((a, inx)=> <p key={inx}>{a}</p>)
-            }
+           <p>{oneItem?.desc}</p>
         </div>
         <div className="sing__left">
             <h2>{oneItem?.price} so'm</h2>

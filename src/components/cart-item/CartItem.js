@@ -26,7 +26,9 @@ function CartItem({ karzinka }) {
 
   return (
     <div>
+      <div style={{textAlign: "center"}}>
       <h2>Jami narx: {karzinka.reduce((a, b) => a + (b.price * b.qty), 0).brm()}</h2>
+      </div>
       <div className=" cartItem">
         {
           karzinka?.map((item, inx) => <div key={inx} className="cart__item">
