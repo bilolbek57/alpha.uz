@@ -1,14 +1,30 @@
-import React from 'react'
+import React, { useState, useEffect } from 'react'
 import "./Map.css"
-import { PRODUCTS } from "../../static"
 import { AiOutlineHeart, AiFillHeart } from "react-icons/ai"
 import { useDispatch, useSelector } from 'react-redux'
 import { ADD_TO_LIKE, REMOVE_LIKE, ADD_TO_CART } from "../../context/action/actionType"
 import { Link } from 'react-router-dom'
+import { db } from "../../server"
+import { collection, getDocs } from "firebase/firestore"
 function Products() {
   const dispatch = useDispatch()
   const like = useSelector(s => s.heart)
   const cart = useSelector(s => s.cart)
+  const [data, setData] = useState([])
+  const productsColRef = collection(db, "products")
+
+  useEffect(() => {
+    const getProduct = async () => {
+      const product = await getDocs(productsColRef)
+      setData(product.docs.map((pro)=> ({...pro.data(), id:pro.id }) ))
+
+    }
+    getProduct()
+  }, [])
+
+
+
+
   console.log(cart);
   const addHaert = (item) => {
     let index = like.findIndex(i => i.id === item.id)
@@ -29,7 +45,7 @@ function Products() {
   return (
     <div className='map'>
       {
-        PRODUCTS?.map((item, inx) => <div key={inx} className="map__card">
+        data?.map((item, inx) => <div key={inx} className="map__card">
 
           <div className='map__heart' >
             {
