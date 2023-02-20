@@ -1,12 +1,12 @@
 .map{
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-around;
+    justify-content: center;
     margin-top: 40px;
 }
 
 .map__card{
-    width: 250px;
+    width: 300px;
     height: auto;
     line-height: 1.4;
     cursor: pointer;

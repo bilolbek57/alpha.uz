@@ -1,7 +1,6 @@
 import React, {useState} from 'react'
 import { collection,addDoc } from "firebase/firestore"
 import { db } from "../../../server"
-import { async } from '@firebase/util'
 
 function CreateHomeBanner() {
   const [name, setName] = useState("")
@@ -34,7 +33,7 @@ function CreateHomeBanner() {
       <form onSubmit={createHomeBanner} action="">
         <input required value={name} onChange={e => setName(e.target.value)} type="text" placeholder='name'/>
         <input required value={urls} onChange={e => setUrls(e.target.value)} type="text" placeholder='urls'/>
-        <select name="" id="">
+        <select value={category} onChange={e => setCategory(e.target.value)} name="" id="">
           <option value="phone">phone</option>
           <option value="tv">televizor</option>
           <option value="laptop">laptop</option>
