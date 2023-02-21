@@ -51,7 +51,7 @@ function Products({ admin }) {
       })
       .catch(err => console.log(err))
   }
-  if (true) {
+  if (!data) {
     return <div className='placeholder2 container'>
       <div className='placeholder__img2'></div>
       <div className='placeholder__text2'>
