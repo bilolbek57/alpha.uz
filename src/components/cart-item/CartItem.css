@@ -57,3 +57,32 @@ background: none;
     border-radius: 5px;
     cursor: pointer;
 }
+.cart__input{
+    width: 400px;
+    height: 30px;
+    border-radius: 10px;
+    border: 2px solid rgb(3, 255, 3);
+}
+.cart__texta{
+    border-radius: 10px;
+    border: 2px solid rgb(0, 253, 0);
+}
+.inputs{
+    display: flex;
+    justify-content: center;
+    align-items: end;
+    gap: 30px;
+    flex-wrap: wrap;
+    margin-top: 50px;
+}
+.inputs button{
+    padding: 10px 40px;
+    background: linear-gradient(45deg, rgb(0, 255, 0),rgb(255, 22, 255));
+    border: none;
+    border-radius: 10px;
+    columns: #fff;
+}
+.inputs button:hover{
+    background: #fff;
+    border: 2px solid red;
+}

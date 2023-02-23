@@ -9,19 +9,34 @@ import { BsPerson, BsPower } from "react-icons/bs"
 import { AiOutlineHeart } from "react-icons/ai"
 import { Link } from 'react-router-dom'
 import { FiX } from "react-icons/fi"
-import {HiOutlineChevronDown} from "react-icons/hi"
-import { useSelector } from 'react-redux'
-import { useLocation } from 'react-router-dom'
+import { HiOutlineChevronDown } from "react-icons/hi"
+import { useSelector, useDispatch } from 'react-redux'
+import { useLocation, useNavigate } from 'react-router-dom'
+import { LOG_IN } from '../../context/action/actionType'
 function Navbar() {
   const [show, setShow] = useState(false)
-  document.body.style.overflow= show ? "hidden" : "auto"
-  const cart = useSelector(s=> s.cart)
-  const {} = useLocation()
+  const cart = useSelector(s => s.cart)
+  const { } = useLocation()
+  const [username, setUsermname] = useState('')
+  const [password, setPassword] = useState("")
+  const { pathname } = useLocation()
+  const dispatch = useDispatch()
+  const navigate = useNavigate()
+
+  const register = ()=>{
+    if(username === "alpha" && password === "2009"){
+      dispatch({type: LOG_IN, payload: (username, password)})
+      navigate("/admin")
+    }else{
+      console.log("error");
+    }
+  }
+
   
-  const {pathname} = useLocation()
-  if(pathname.includes("admin")){
+  document.body.style.overflow = show ? "hidden" : "auto"
+  if (pathname.includes("admin")) {
     return <></>
-  } 
+  }
 
 
   return (
@@ -67,22 +82,14 @@ function Navbar() {
           <div onClick={() => setShow(false)} className="nav__shadow"></div>
           <div className="nav__login">
             <FiX onClick={() => setShow(false)} className='nav__close' />
-            <h2>Kirish yoki profil yaratish</h2>
-            <p>phone raqami</p>
-            <div className="raqam">
-            <p>
-              +998<HiOutlineChevronDown/>
-            <input type="text" />
-            </p>
-            </div>
-        <p className='s'>Phone raqami maidoni tuldirilish kerak</p>
-        <button className='nav__btn'>Confirm</button>
-      </div>
+                <input value={username} onChange={e => setUsermname(e.target.value)} type="text" placeholder='username' />
+            <input value={password} onChange={e => setPassword(e.target.value)} type="password" placeholder='password'/>
+            <button onClick={register}>Login</button>
+          </div>
         </> :
-          <></>
+          <></> 
       }
       <></>
-
     </>
   )
 }

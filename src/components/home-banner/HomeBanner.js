@@ -8,7 +8,7 @@ function HomeBanner({admin}) {
     const [nameImg, setNameImg] = useState([])
     const HomeBannerColRef = collection(db, "homebanner")
 
-    const [refersh, setRefresh] = useState(false)
+    const [refresh, setRefresh] = useState(false)
 
     useEffect(() => {
         const getHomeBanner = async () => {
@@ -20,13 +20,13 @@ function HomeBanner({admin}) {
     console.log(nameImg);
 
 
-    const deleProduct = async(id)=>{
-        await deleteDoc(doc(db, "products", id))
+    const delHbanner = async(id)=>{
+        await deleteDoc(doc(db, "homebanner", id))
         .then(res=> {
           console.log(res)
-          setRefresh(!refersh)
+          setRefresh(!refresh)  
         })
-        .catch(err=> console.log(err))
+        .catch(res=> console.log(res))
        }
     return (
         <div className=' homeBanner'>
@@ -36,7 +36,7 @@ function HomeBanner({admin}) {
                     <p>{item?.name}</p>
                     {
                         admin ?
-                        <button onClick={()=> deleProduct(item.id)}>delete</button>
+                        <button onClick={()=> delHbanner(item.id)}>delete</button>
                         :
                         <></>
                     }
