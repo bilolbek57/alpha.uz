@@ -4,11 +4,11 @@ import { ADD_TO_CART, REMOVE_CART, } from '../../context/action/actionType'
 import { useDispatch, useSelector } from 'react-redux'
 import { Link } from 'react-router-dom'
 function CartItem({ karzinka }) {
-  const [name, setName] = useState()
-  const [tel, setTel] = useState()
-  const [adress, setAdress] = useState()
-  const [desc, setDesc] = useState()
-  const dispatch = useDispatch()
+  const [name, setName] = useState("")
+  const [tel, setTel] = useState("")
+  const [adress, setAdress] = useState("")
+  const [desc, setDesc] = useState("")
+  const dispatch = useDispatch("")
   const cart = useSelector(s => s.cart)
 
   const addToCart = (item) => {
@@ -30,7 +30,7 @@ function CartItem({ karzinka }) {
   }
   const order = () => {
     console.log({ name, tel, adress, desc, cart });
-  }
+  } 
 
   return (
     <div>
@@ -38,10 +38,10 @@ function CartItem({ karzinka }) {
         <h2 style={{marginTop: "50px"}}>Jami narx: {karzinka.reduce((a, b) => a + (b.price * b.qty), 0).brm()}</h2>
         <div className="inputs">
         <input className='cart__input' value={name} onChange={e => setName(e.target.value)} type="text" placeholder='name' />
-        <input className='cart__input' value={tel} onChange={e => setTel(e.target.value)} type="text" placeholder='tel' />
-        <input className='cart__input' value={adress} onChange={e => setAdress(e.target.value)} type="text" placeholder='addres' />
+        <input className='cart__input' value={tel} onChange={e => setTel(e.target.value)} type="number" placeholder='tel' />
+        <input className='cart__input' value={adress} onChange={e => setAdress(e.target.value)} type="text" placeholder='address' />
         <textarea className='cart__texta' value={desc} onChange={e => setDesc(e.target.value)} name="" placeholder='desc' id="" cols="30" rows="10"></textarea>
-        <button  onClick={order}>Buyurtma berish</button>
+        <button  onClick={order}>Buyurtma berish</button>     
         </div>
       </div>
       <div className=" cartItem">
