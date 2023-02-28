@@ -4,7 +4,7 @@ function MangeProduct() {
   return (
     <div>
       <h2>Manage Product</h2>
-      <Product admin= {true}/>
+      <Product admin= {true}/>  
     </div>
   )
 }

@@ -30,7 +30,7 @@ function CreateHomeBanner() {
   return (
     <div>
       <h1>Create HomeBannner</h1>
-      <form onSubmit={createHomeBanner} action="">
+      <form onSubmit={createHomeBanner} action="" className='create__form'>
         <input required value={name} onChange={e => setName(e.target.value)} type="text" placeholder='name'/>
         <input required value={urls} onChange={e => setUrls(e.target.value)} type="text" placeholder='urls'/>
         <select value={category} onChange={e => setCategory(e.target.value)} name="" id="">

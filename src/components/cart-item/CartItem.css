@@ -87,5 +87,6 @@ background: none;
 }
 .inputs button:hover{
     background: #fff;
+    color: #000;
     border: 2px solid red;
 }

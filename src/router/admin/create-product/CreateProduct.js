@@ -38,7 +38,7 @@ function CreateProduct() {
   }
 
   return (
-    <div>
+    <div className='creat_pro'>
       <h2>CreateProduct</h2>
       <form onSubmit={createProduct} action='' className='create__form'>
         <input required value={title} onChange={e => setTitle(e.target.value)} type="text" placeholder='title' />

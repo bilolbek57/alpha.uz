@@ -11,13 +11,17 @@ import {IoIosCreate} from "react-icons/io"
 import CreateHomeBanner from './create-home-banner/CreateHomeBanner'
 import rasm from "../../assets/alpha.jpg"
 import ManageHomeBanner from './manage-home-banner/ManageHomeBanner'
+import { useDispatch } from 'react-redux'
+import {LOG_OUT} from "../../context/action/actionType"
 function Admin() {  
+  const dispatch = useDispatch()
+
   return (
     <div className='admin'>
       <div className="admin__sidebar">
           <h2 style={{color: "#fff"}}>Admin Panel</h2>
         <img className='alpha__img' src={rasm} alt="" />
-        ,<NavLink to={"/"}><h1 className='nav__logo' style={{color:"red"}}>alpha</h1></NavLink>
+        <NavLink to={"/"}><h1 className='nav__logo' style={{color:"red"}}>alpha</h1></NavLink>
         <ul className="admin__collection">
           <li className="admin__item"><NavLink to={"/"}><AiFillHome/>Home</NavLink></li>
           <li className="admin__item"><NavLink to={"create-product"}><IoIosCreate/>Create Product</NavLink></li>
@@ -27,6 +31,7 @@ function Admin() {
           <li className="admin__item"><CgProfile/>Profile</li>
           <li className="admin__item"><ImProfile/>About</li>
         </ul>
+        <button onClick={()=> dispatch({type:LOG_OUT})}>log out</button>
       </div>
       <div className="admin__content">
       <Routes>
@@ -36,7 +41,6 @@ function Admin() {
           <Route path='/manage-home-banner' element={<ManageHomeBanner/>}/>
         </Routes>
       </div>
-    
     </div>
   )
 }

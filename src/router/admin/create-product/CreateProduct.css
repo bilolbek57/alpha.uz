@@ -1,0 +1,23 @@
+.create__form{
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+.create__form input{
+    width: 400px;
+    height: 40px;
+    border-radius: 0 10px 10px 10px;
+    border: 2px solid rgb(0, 255, 0);
+}
+.create__form button{
+padding: 10px 40px;
+border-radius: 10px;
+background-color: red;
+border: none;
+color: #fff;
+}
+.create__form button:hover{
+    background: #fff;
+    color: #000;
+    border: 2px solid;
+}
