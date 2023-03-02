@@ -1,7 +1,6 @@
 .admin{
     height: 100vh;
     display: flex;
-    flex-wrap: wrap;
 }
 .admin__sidebar{
     width: 300px;
